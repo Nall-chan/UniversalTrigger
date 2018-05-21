@@ -2,7 +2,7 @@
 [![Version](https://img.shields.io/badge/Modul%20Version-1.0-blue.svg)]()
 [![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-green.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)  
 [![Version](https://img.shields.io/badge/Symcon%20Version-4.13%20%3E-green.svg)](https://www.symcon.de/service/dokumentation/installation/migration-v42-v43/)
-[![StyleCI](https://styleci.io/repos/132882302/shield?style=flat)](https://styleci.io/repos/132882302)  
+[![StyleCI](https://styleci.io/repos/134292227/shield?style=flat)](https://styleci.io/repos/134292227)  
 
 # IPSNoTrigger
 
