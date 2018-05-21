@@ -120,8 +120,9 @@ var_dump($_IPS); // Erstes Array unter Meldungen
 $Data = json_decode($_IPS['DATA'],true);
 var_dump($Data); // Zweites Array unter Meldungen
 ```
+
 Ausgabe:  
-`21.05.2018 17:39:07 | ScriptEngine | Ergebnis für Ereignis 23782
+```21.05.2018 17:39:07 | ScriptEngine | Ergebnis für Ereignis 23782
 array(8) {
   ["SELF"]=>
   int(30118)
@@ -143,7 +144,8 @@ array(8) {
 array(1) {
   [0]=>
   bool(false)
-}`
+}
+```
 
 ## 7. Parameter / Modul-Infos
 
