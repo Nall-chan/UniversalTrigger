@@ -1,0 +1,11 @@
+{
+    "id": "{A79F745E-FFB8-4D69-BD25-6914AC5A50AE}",
+    "name": "UniversalTrigger Group",
+    "type": 0,
+    "vendor": "",
+    "aliases": ["Universeller Trigger (group)"],
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "UT"
+}

@@ -1,0 +1,11 @@
+{
+    "id": "{4FA5F724-D93B-457B-94EC-E80CFF5415D8}",
+    "name": "UniversalTrigger",
+    "type": 0,
+    "vendor": "",
+    "aliases": ["Universeller Trigger (single)"],
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "UT"
+}

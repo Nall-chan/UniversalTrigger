@@ -1,0 +1,13 @@
+{
+    "id": "{C4843FD7-E6A3-4FD5-93FF-1DFBB173F3BE}",
+    "author": "Michael Tr\u00f6ger",
+    "name": "UniversalTrigger Library",
+    "url": "https://github.com/Nall-chan/IPSUniTrigger",
+    "version": "1.01",
+    "build": 101,
+    "date": 1498241677,
+    "compatibility": {
+        "version": "4.3",
+        "date": 1498241677
+    }
+}

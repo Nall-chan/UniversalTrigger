@@ -1,0 +1,56 @@
+{
+    "elements":
+            [
+                {
+                    "name": "ScriptID",
+                    "type": "SelectScript",
+                    "caption": "Script"
+                },
+                {
+                    "type": "List",
+                    "name": "Trigger",
+                    "add": true,
+                    "delete": true,
+                    "sort": {
+                        "column": "ObjectId",
+                        "direction": "ascending"
+                    },
+                    "columns": [{
+                            "label": "Object ID",
+                            "name": "ObjectId",
+                            "width": "90px",
+                            "add": 0,
+                            "edit": {
+                                "type": "SelectObject"
+                            }
+                        }, {
+                            "label": "Message",
+                            "name": "MessageId",
+                            "width": "200px",
+                            "add": 10403,
+                            "edit": {
+                                "type": "Select",
+                                "caption": "Message",
+                                "options": [
+                                ]
+                            }
+                        }, {
+                            "label": "Name",
+                            "name": "Name",
+                            "width": "auto",
+                            "add": "",
+                            "save": false
+                        }
+                    ],
+                    "values": []
+                }
+            ],
+    "status":
+            [
+                {
+                    "code": 102,
+                    "icon": "active",
+                    "caption": "Instance active."
+                }
+            ]
+}

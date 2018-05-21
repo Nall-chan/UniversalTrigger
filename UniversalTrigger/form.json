@@ -1,0 +1,20 @@
+{
+    "elements":
+            [
+                {
+                    "caption": "Script",
+                    "name": "ScriptID",
+                    "type": "SelectScript"
+                }, {
+                    "caption": "Object",
+                    "name": "ObjectId",
+                    "type": "SelectObject"
+                }, {
+                    "caption": "Message",
+                    "name": "MessageId",
+                    "type": "Select",
+                    "options": [
+                    ]
+                }
+            ]
+}
