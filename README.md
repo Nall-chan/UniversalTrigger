@@ -1,10 +1,10 @@
 [![Version](https://img.shields.io/badge/Symcon-PHPModul-red.svg)](https://www.symcon.de/service/dokumentation/entwicklerbereich/sdk-tools/sdk-php/)
-[![Version](https://img.shields.io/badge/Modul%20Version-1.0-blue.svg)]()
+[![Version](https://img.shields.io/badge/Modul%20Version-1.1-blue.svg)]()
 [![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-green.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)  
 [![Version](https://img.shields.io/badge/Symcon%20Version-4.13%20%3E-green.svg)](https://www.symcon.de/service/dokumentation/installation/migration-v42-v43/)
 [![StyleCI](https://styleci.io/repos/134292227/shield?style=flat)](https://styleci.io/repos/134292227)  
 
-# IPSNoTrigger
+# IPSUniversalTrigger
 
 ## Dokumentation
 
@@ -175,7 +175,7 @@ array(1) {
 
 **Changlog:**  
 
-Version 1.0:  
+Version 1.1:  
  - Erstes Release  
 
 ## 9. Spenden  
