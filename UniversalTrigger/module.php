@@ -1,4 +1,4 @@
-<?
+<?php
 
 /*
  * @addtogroup unitrigger
@@ -87,7 +87,7 @@ class UniversalTrigger extends UniversalTriggerBase
         return json_encode($Form);
     }
 
-################## PRIVATE     
+    ################## PRIVATE
 }
 
 /** @} */

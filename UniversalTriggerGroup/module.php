@@ -1,4 +1,4 @@
-<?
+<?php
 
 /*
  * @addtogroup unitrigger
@@ -66,14 +66,12 @@ class UniversalTriggerGroup extends UniversalTriggerBase
      */
     public function ApplyChanges()
     {
-        foreach ($this->OldTrigger as $ObjektTrigger)
-        {
+        foreach ($this->OldTrigger as $ObjektTrigger) {
             $this->UnregisterMessage($ObjektTrigger->ObjectId, $ObjektTrigger->MessageId);
         }
         parent::ApplyChanges();
         $NewTrigger = json_decode($this->ReadPropertyString('Trigger'));
-        foreach ($NewTrigger as $ObjektTrigger)
-        {
+        foreach ($NewTrigger as $ObjektTrigger) {
             $this->RegisterMessage($ObjektTrigger->ObjectId, $ObjektTrigger->MessageId);
         }
         $this->OldTrigger = $NewTrigger;
@@ -83,23 +81,22 @@ class UniversalTriggerGroup extends UniversalTriggerBase
     {
         $form = json_decode(file_get_contents(__DIR__ . "/form.json"), true);
         $Triggers = json_decode($this->ReadPropertyString('Trigger'), true);
-        foreach ($Triggers as &$Trigger)
-        {
-            if (!IPS_ObjectExists($Trigger['ObjectId']) or ( $Trigger['ObjectId'] == 0))
+        foreach ($Triggers as &$Trigger) {
+            if (!IPS_ObjectExists($Trigger['ObjectId']) or ($Trigger['ObjectId'] == 0)) {
                 $Trigger['Name'] = sprintf($this->Translate("Object #%d not exists"), $Trigger['ObjectId']);
-            else
+            } else {
                 $Trigger['Name'] = IPS_GetLocation($Trigger['ObjectId']);
+            }
         }
         $form['elements'][1]['values'] = $Triggers;
-        foreach (self::$Messages as $MessageId => $MessageName)
-        {
+        foreach (self::$Messages as $MessageId => $MessageName) {
             $Messages[] = array('label' => $MessageName, 'value' => $MessageId);
         }
         $form['elements'][1]['columns'][1]['edit']['options'] = $Messages;
         return json_encode($form);
     }
 
-################## PRIVATE     
+    ################## PRIVATE
 }
 
 /** @} */
