@@ -15,17 +15,18 @@ declare(strict_types=1);
  *
  */
 
-require_once(__DIR__ . '/../libs/UniversalTriggerBase.php');
+require_once __DIR__ . '/../libs/UniversalTriggerBase.php';
 
 /**
  * UniversalTrigger Klasse für die Nutzung der IPS Nachrichten in einem PHP-Script.
  * Erweitert UniversalTriggerBase.
  *
- * @package       UniTrigger
  * @author        Michael Tröger <micha@nall-chan.net>
  * @copyright     2019 Michael Tröger
  * @license       https://creativecommons.org/licenses/by-nc-sa/4.0/ CC BY-NC-SA 4.0
+ *
  * @version       1.5
+ *
  * @example <b>Ohne</b>
  *
  * @property int $OldObjectId
@@ -35,8 +36,6 @@ class UniversalTrigger extends UniversalTriggerBase
 {
     /**
      * Interne Funktion des SDK.
-     *
-     * @access public
      */
     public function Create()
     {
@@ -50,8 +49,6 @@ class UniversalTrigger extends UniversalTriggerBase
 
     /**
      * Interne Funktion des SDK.
-     *
-     * @access public
      */
     public function MessageSink($TimeStamp, $SenderID, $Message, $Data)
     {
@@ -60,8 +57,6 @@ class UniversalTrigger extends UniversalTriggerBase
 
     /**
      * Interne Funktion des SDK.
-     *
-     * @access public
      */
     public function ApplyChanges()
     {
@@ -87,7 +82,7 @@ class UniversalTrigger extends UniversalTriggerBase
         return json_encode($Form);
     }
 
-    ################## PRIVATE
+    //################# PRIVATE
 }
 
-/** @} */
+/* @} */
