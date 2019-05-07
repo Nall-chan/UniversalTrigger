@@ -1,10 +1,10 @@
-[![Version](https://img.shields.io/badge/Symcon-PHPModul-red.svg)](https://www.symcon.de/service/dokumentation/entwicklerbereich/sdk-tools/sdk-php/)
-[![Version](https://img.shields.io/badge/Modul%20Version-1.1-blue.svg)]()
+[![SDK](https://img.shields.io/badge/Symcon-PHPModul-red.svg)](https://www.symcon.de/service/dokumentation/entwicklerbereich/sdk-tools/sdk-php/)
+[![Version](https://img.shields.io/badge/Modul%20Version-1.5-blue.svg)]()
 [![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-green.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)  
-[![Version](https://img.shields.io/badge/Symcon%20Version-4.13%20%3E-green.svg)](https://www.symcon.de/service/dokumentation/installation/migration-v42-v43/)
+[![Version](https://img.shields.io/badge/Symcon%20Version-5.1%20%3E-green.svg)](https://www.symcon.de/forum/threads/30857-IP-Symcon-5-1-%28Stable%29-Changelog)
 [![StyleCI](https://styleci.io/repos/134292227/shield?style=flat)](https://styleci.io/repos/134292227)  
 
-# IPSUniversalTrigger
+# Symcon-Modul: UniversalTrigger
 
 ## Dokumentation
 
@@ -39,15 +39,13 @@ u.v.m.
 
 ## 2. Voraussetzungen
 
- - IPS ab Version 4.3
+ - IPS ab Version 5.1
  
 ## 3. Installation
 
-### IPS 4.3:
-   Bei privater Nutzung unter IPS 4.3:  
-    Über das Modul-Control folgende URL hinzufügen.  
-   `git://github.com/Nall-chan/IPSUniversalTrigger.git`  
-
+### IPS 5.1:
+   Bei privater Nutzung:
+     Über den 'Module-Store' in IPS.  
    **Bei kommerzieller Nutzung (z.B. als Errichter oder Integrator) wenden Sie sich bitte an den Autor.**  
 
 ## 4. Universaltrigger (single)
@@ -174,6 +172,9 @@ array(1) {
 ## 8. Anhang
 
 **Changlog:**  
+
+Version 1.5:  
+ - Release für IPS 5.1 und den Module-Store  
 
 Version 1.1:  
  - Erstes Release  

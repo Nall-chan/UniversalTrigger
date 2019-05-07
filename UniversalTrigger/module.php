@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * @addtogroup unitrigger
  * @{
@@ -7,23 +9,23 @@
  * @package       UniTrigger
  * @file          module.php
  * @author        Michael Tröger <micha@nall-chan.net>
- * @copyright     2018 Michael Tröger
+ * @copyright     2019 Michael Tröger
  * @license       https://creativecommons.org/licenses/by-nc-sa/4.0/ CC BY-NC-SA 4.0
- * @version       1.1
+ * @version       1.5
  *
  */
 
-require_once(__DIR__ . "/../libs/UniversalTriggerBase.php");
+require_once(__DIR__ . '/../libs/UniversalTriggerBase.php');
 
 /**
- * NoTrigger Klasse für die die Überwachung von mehreren Variablen auf fehlende Änderung/Aktualisierung.
- * Erweitert NoTriggerBase.
+ * UniversalTrigger Klasse für die Nutzung der IPS Nachrichten in einem PHP-Script.
+ * Erweitert UniversalTriggerBase.
  *
  * @package       UniTrigger
  * @author        Michael Tröger <micha@nall-chan.net>
- * @copyright     2018 Michael Tröger
+ * @copyright     2019 Michael Tröger
  * @license       https://creativecommons.org/licenses/by-nc-sa/4.0/ CC BY-NC-SA 4.0
- * @version       1.1
+ * @version       1.5
  * @example <b>Ohne</b>
  *
  * @property int $OldObjectId
@@ -53,10 +55,6 @@ class UniversalTrigger extends UniversalTriggerBase
      */
     public function MessageSink($TimeStamp, $SenderID, $Message, $Data)
     {
-        $this->SendDebug('Message:TimeStamp', $TimeStamp, 0);
-        $this->SendDebug('Message:SenderID', $SenderID, 0);
-        $this->SendDebug('Message:Message', $Message, 0);
-        $this->SendDebug('Message:Data', $Data, 0);
         $this->FireTargetScript($TimeStamp, $SenderID, $Message, $Data);
     }
 
@@ -68,19 +66,21 @@ class UniversalTrigger extends UniversalTriggerBase
     public function ApplyChanges()
     {
         $this->UnregisterMessage($this->OldObjectId, $this->OldMessageId);
+        $this->UnregisterReference($this->OldObjectId);
         parent::ApplyChanges();
         $NewObjectId = $this->ReadPropertyInteger('ObjectId');
         $NewMessageId = $this->ReadPropertyInteger('MessageId');
         $this->RegisterMessage($NewObjectId, $NewMessageId);
+        $this->RegisterReference($NewObjectId);
         $this->OldObjectId = $NewObjectId;
         $this->OldMessageId = $NewMessageId;
     }
 
     public function GetConfigurationForm()
     {
-        $Form = json_decode(file_get_contents(__DIR__ . "/form.json"), true);
+        $Form = json_decode(file_get_contents(__DIR__ . '/form.json'), true);
         foreach (self::$Messages as $MessageId => $MessageName) {
-            $Messages[] = array('label' => $MessageName, 'value' => $MessageId);
+            $Messages[] = ['label' => $MessageName, 'value' => $MessageId];
         }
         $Form['elements'][2]['options'] = $Messages;
         $this->SendDebug('Form', json_encode($Form), 0);

@@ -16,9 +16,9 @@
                         "direction": "ascending"
                     },
                     "columns": [{
-                            "label": "Object ID",
+                            "label": "Object",
                             "name": "ObjectId",
-                            "width": "90px",
+                            "width": "auto",
                             "add": 0,
                             "edit": {
                                 "type": "SelectObject"
@@ -34,12 +34,6 @@
                                 "options": [
                                 ]
                             }
-                        }, {
-                            "label": "Name",
-                            "name": "Name",
-                            "width": "auto",
-                            "add": "",
-                            "save": false
                         }
                     ],
                     "values": []
