@@ -22,16 +22,16 @@ eval('namespace UniTrigger {?>' . file_get_contents(__DIR__ . '/helper/DebugHelp
  * UniTrigger Basis-Klasse für die die Überwachung von Variablen auf fehlende Änderung/Aktualisierung.
  * Erweitert IPSModule.
  *
- * @package       UniTrigger
  * @author        Michael Tröger <micha@nall-chan.net>
  * @copyright     2019 Michael Tröger
  * @license       https://creativecommons.org/licenses/by-nc-sa/4.0/ CC BY-NC-SA 4.0
+ *
  * @version       1.5
+ *
  * @example <b>Ohne</b>
  */
 class UniversalTriggerBase extends IPSModule
 {
-
     use \UniTrigger\DebugHelper,
         \UniTrigger\BufferHelper;
     public static $Messages = [
@@ -76,10 +76,9 @@ class UniversalTriggerBase extends IPSModule
     /**
      * Startet das Ziel-Skript.
      *
-     * @access protected
-     * @param int $TimeStamp
-     * @param int $SenderID
-     * @param int $Message
+     * @param int   $TimeStamp
+     * @param int   $SenderID
+     * @param int   $Message
      * @param mixed $Data
      */
     protected function FireTargetScript($TimeStamp, $SenderID, $Message, $Data)
@@ -108,8 +107,7 @@ class UniversalTriggerBase extends IPSModule
     /**
      * Deregistriert eine Überwachung eines Links.
      *
-     * @access protected
-     * @param int $ObjektID IPS-ID
+     * @param int $ObjektID  IPS-ID
      * @param int $MessageID
      */
     protected function UnregisterMessage($ObjektID, $MessageID)
@@ -130,8 +128,7 @@ class UniversalTriggerBase extends IPSModule
     /**
      * Registriert eine Überwachung eines Links.
      *
-     * @access protected
-     * @param int $ObjektID IPS-ID
+     * @param int $ObjektID  IPS-ID
      * @param int $MessageID
      */
     protected function RegisterMessage($ObjektID, $MessageID)
@@ -148,7 +145,6 @@ class UniversalTriggerBase extends IPSModule
         $this->SendDebug('RegisterWatch:' . $ObjektID, $MessageID, 0);
         parent::RegisterMessage($ObjektID, $MessageID);
     }
-
 }
 
-/** @} */
+/* @} */
