@@ -3,9 +3,12 @@
     "name": "UniversalTrigger Group",
     "type": 0,
     "vendor": "",
-    "aliases": ["Universeller Trigger (group)"],
+    "aliases": [
+        "Universeller Trigger (group)"
+    ],
     "parentRequirements": [],
     "childRequirements": [],
     "implemented": [],
-    "prefix": "UT"
+    "prefix": "UT",
+    "url": "https://github.com/Nall-chan/IPSUniversalTrigger/README.md"
 }

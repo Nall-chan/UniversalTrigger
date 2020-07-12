@@ -9,9 +9,9 @@ declare(strict_types=1);
  * @package       UniTrigger
  * @file          module.php
  * @author        Michael Tröger <micha@nall-chan.net>
- * @copyright     2019 Michael Tröger
+ * @copyright     2020 Michael Tröger
  * @license       https://creativecommons.org/licenses/by-nc-sa/4.0/ CC BY-NC-SA 4.0
- * @version       1.5
+ * @version       1.6
  *
  */
 
@@ -22,10 +22,10 @@ require_once __DIR__ . '/../libs/UniversalTriggerBase.php';
  * Erweitert UniversalTriggerBase.
  *
  * @author        Michael Tröger <micha@nall-chan.net>
- * @copyright     2019 Michael Tröger
+ * @copyright     2020 Michael Tröger
  * @license       https://creativecommons.org/licenses/by-nc-sa/4.0/ CC BY-NC-SA 4.0
  *
- * @version       1.5
+ * @version       1.6
  *
  * @example <b>Ohne</b>
  *
@@ -44,7 +44,6 @@ class UniversalTrigger extends UniversalTriggerBase
         $this->RegisterPropertyInteger('ScriptID', 0);
         $this->RegisterPropertyInteger('ObjectId', 0);
         $this->RegisterPropertyInteger('MessageId', 10403);
-        $this->SetStatus(IS_ACTIVE);
     }
 
     /**

@@ -3,9 +3,9 @@
     "author": "Michael Tr\u00f6ger",
     "name": "UniversalTrigger Library",
     "url": "https://github.com/Nall-chan/IPSUniTrigger",
-    "version": "1.5",
-    "build": 110,
-    "date": 1556987178 ,
+    "version": "1.6",
+    "build": 130,
+    "date": 1594559336 ,
     "compatibility": {
         "version": "5.1"
     }
