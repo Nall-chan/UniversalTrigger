@@ -32,8 +32,9 @@ eval('namespace UniTrigger {?>' . file_get_contents(__DIR__ . '/helper/DebugHelp
  */
 class UniversalTriggerBase extends IPSModule
 {
-    use \UniTrigger\DebugHelper,
-        \UniTrigger\BufferHelper;
+    use \UniTrigger\DebugHelper;
+    use \UniTrigger\BufferHelper;
+
     public static $Messages = [
         IPS_OBJECTMESSAGE + 3   => 'Object has new parent',
         IPS_OBJECTMESSAGE + 4   => 'Object change name',
