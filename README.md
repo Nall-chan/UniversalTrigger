@@ -2,7 +2,9 @@
 [![Version](https://img.shields.io/badge/Modul%20Version-1.6-blue.svg)]()
 [![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-green.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)  
 [![Version](https://img.shields.io/badge/Symcon%20Version-5.1%20%3E-green.svg)](https://www.symcon.de/forum/threads/30857-IP-Symcon-5-1-%28Stable%29-Changelog)
-[![Check Style](https://github.com/Nall-chan/IPSUniversalTrigger/workflows/Check%20Style/badge.svg)](https://github.com/Nall-chan/IPSUniversalTrigger/actions) [![Run Tests](https://github.com/Nall-chan/IPSUniversalTrigger/workflows/Run%20Tests/badge.svg)](https://github.com/Nall-chan/IPSUniversalTrigger/actions)  
+[![Check Style](https://github.com/Nall-chan/IPSUniversalTrigger/workflows/Check%20Style/badge.svg)](https://github.com/Nall-chan/IPSUniversalTrigger/actions) 
+[![Run Tests](https://github.com/Nall-chan/IPSUniversalTrigger/workflows/Run%20Tests/badge.svg)](https://github.com/Nall-chan/IPSUniversalTrigger/actions)  
+[![Spenden](https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donate_SM.gif)](#9-spenden)    
 
 # Symcon-Modul: UniversalTrigger
 
@@ -10,16 +12,18 @@
 
 **Inhaltsverzeichnis**
 
-1. [Funktionsumfang](#1-funktionsumfang) 
-2. [Voraussetzungen](#2-voraussetzungen)
-3. [Installation](#3-installation)
-4. [Universaltrigger (single)](#4-universaltrigger-single)
-5. [Universaltrigger (group)](#5-universaltrigger-group)
-6. [Variablen im Ziel-Script](#6-variablen-im-ziel-script)
-7. [Parameter / Modul-Infos](#7-parameter--modul-infos)
-8. [Anhang](#8-anhang)
-9. [Spenden](#9-spenden)
-10. [Lizenz](#10-lizenz)
+- [Symcon-Modul: UniversalTrigger](#symcon-modul-universaltrigger)
+  - [Dokumentation](#dokumentation)
+  - [1. Funktionsumfang](#1-funktionsumfang)
+  - [2. Voraussetzungen](#2-voraussetzungen)
+  - [3. Software-Installation](#3-software-installation)
+  - [4. Universaltrigger (single)](#4-universaltrigger-single)
+  - [5. Universaltrigger (group)](#5-universaltrigger-group)
+  - [6. Variablen im Ziel-Script](#6-variablen-im-ziel-script)
+  - [7. Parameter / Modul-Infos](#7-parameter--modul-infos)
+  - [8. Anhang](#8-anhang)
+  - [9. Spenden](#9-spenden)
+  - [10. Lizenz](#10-lizenz)
 
 ## 1. Funktionsumfang
 
@@ -32,21 +36,21 @@ So können mit den enthaltenden Modulen PHP-Scripte gestartet werden wenn z.B:
 * Die Sichtbarkeit eines Objektes sich geändert hat
 * Die Einstellungen einer Instanz verändert wurden
 * Ein Ereignis de- oder aktiviert wurde
-* Ein Mediaobjekt aktualisert wurde
+* Ein Mediaobjekt aktualisiert wurde
 * Ein Link sich geändert hat
 
 u.v.m.
 
 ## 2. Voraussetzungen
 
- - IPS ab Version 5.1
- 
-## 3. Installation
+ - IPS 5.1 oder höher  
 
-### IPS 5.1:
-   Bei privater Nutzung:
-     Über den 'Module-Store' in IPS.  
+## 3. Software-Installation
+
+  Über den 'Module-Store' in IPS das Modul 'B+G E-Tech' hinzufügen.  
    **Bei kommerzieller Nutzung (z.B. als Errichter oder Integrator) wenden Sie sich bitte an den Autor.**  
+![Module-Store](imgs/install.png)  
+
 
 ## 4. Universaltrigger (single)
 
@@ -81,15 +85,15 @@ Somit wird das Ziel-Script auch nie gestartet.
 Anhand der PHP-Variable $_IPS ist es möglich im Ziel-Script auf alle Werte der Nachrichten und des Ereignissen zuzugreifen.   
 Folgende Felder im Array der PHP-Variable $_IPS stehen im Ziel-Script zur Verfügung:    
 
-| Index     | Typ     | Beschreibung                                                                |
-| :--------:|:------: | :-------------------------------------------------------------------------: |
-| SELF      | integer | Objekt ID des Skriptes                                                      |
-| INSTANCE  | integer | Instanz ID des auslösenden Universaltrigger                                 |
-| EVENT     | integer | Objekt ID von welchem die Nachricht stammt                                  |
-| VALUE     | integer | Die Nachricht welche das Skript gestartet hat (siehe 1*)                    |
-| DATA      | string  | JSON codiertes Array welches alle Daten der Nachticht enthält (siehe 2*)    |
-| TIMESTAMP | integer | Zeitpunkt der Nachricht als UnixTimestamp                                   |
-| SENDER    | string  | immer 'UniTrigger'                                                          |
+|   Index   |   Typ   |                               Beschreibung                               |
+| :-------: | :-----: | :----------------------------------------------------------------------: |
+|   SELF    | integer |                          Objekt ID des Skriptes                          |
+| INSTANCE  | integer |               Instanz ID des auslösenden Universaltrigger                |
+|   EVENT   | integer |                Objekt ID von welchem die Nachricht stammt                |
+|   VALUE   | integer |         Die Nachricht welche das Skript gestartet hat (siehe 1*)         |
+|   DATA    | string  | JSON codiertes Array welches alle Daten der Nachricht enthält (siehe 2*) |
+| TIMESTAMP | integer |                Zeitpunkt der Nachricht als UnixTimestamp                 |
+|  SENDER   | string  |                            immer 'UniTrigger'                            |
 
  Das Ziel-Script kann anhand von 'EVENT' und 'VALUE' unterschiedliche Aktionen ausführen.  
  Dies ist gerade bei beim 'Universaltrigger (group)' sehr hilfreich.  
@@ -149,25 +153,25 @@ array(1) {
 
 **GUIDs der Instanzen (z.B. wenn Instanz per PHP angelegt werden soll):**  
 
-| Instanz                   | GUID                                   |
+|          Instanz          |                  GUID                  |
 | :-----------------------: | :------------------------------------: |
 | Universaltrigger (single) | {4FA5F724-D93B-457B-94EC-E80CFF5415D8} |
 | Universaltrigger (group)  | {A79F745E-FFB8-4D69-BD25-6914AC5A50AE} |
 
 **Eigenschaften von Universaltrigger (single):**  
 
-| Eigenschaft   | Typ     | Standardwert | Funktion                                     |
-| :-----------: | :-----: | :----------: | :------------------------------------------: |
-| ScriptID      | integer | 0            | Ziel-Script                                  |
-| ObjectId      | integer | 0            | Objekt ID welches überwacht wird             |
-| MessageId     | integer | 10403        | Wert der Nachricht auch welche reagiert wird |
+| Eigenschaft |   Typ   | Standardwert |                   Funktion                   |
+| :---------: | :-----: | :----------: | :------------------------------------------: |
+|  ScriptID   | integer |      0       |                 Ziel-Script                  |
+|  ObjectId   | integer |      0       |       Objekt ID welches überwacht wird       |
+|  MessageId  | integer |    10403     | Wert der Nachricht auch welche reagiert wird |
 
 **Eigenschaften von Universaltrigger (group):**  
 
-| Eigenschaft   | Typ     | Standardwert | Funktion                                                                  |
-| :-----------: | :-----: | :----------: | :-----------------------------------------------------------------------: |
-| ScriptID      | integer | 0            | Ziel-Script                                                               |
-| Trigger       | string  | []           | Konfiguration von Objekten und Nachrichten als JSON codiertes Array       |
+| Eigenschaft |   Typ   | Standardwert |                              Funktion                               |
+| :---------: | :-----: | :----------: | :-----------------------------------------------------------------: |
+|  ScriptID   | integer |      0       |                             Ziel-Script                             |
+|   Trigger   | string  |      []      | Konfiguration von Objekten und Nachrichten als JSON codiertes Array |
 
 ## 8. Anhang
 
@@ -184,9 +188,13 @@ Version 1.1:
 
 ## 9. Spenden  
   
-  Die Library ist für die nicht kommzerielle Nutzung kostenlos, Schenkungen als Unterstützung für den Autor werden hier akzeptiert:  
+  Die Library ist für die nicht kommerzielle Nutzung kostenlos, Schenkungen als Unterstützung für den Autor werden hier akzeptiert:  
 
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G2SLW2MEMQZH2" target="_blank"><img src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donate_LG.gif" border="0" /></a>
+  PayPal:  
+<a href="https://www.paypal.com/donate?hosted_button_id=G2SLW2MEMQZH2" target="_blank"><img src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donate_LG.gif" border="0" /></a>  
+
+  Wunschliste:  
+<a href="https://www.amazon.de/hz/wishlist/ls/YU4AI9AQT9F?ref_=wl_share" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg" border="0" width="100"/></a>  
 
 
 ## 10. Lizenz  
