@@ -1,11 +1,11 @@
 {
     "id": "{C4843FD7-E6A3-4FD5-93FF-1DFBB173F3BE}",
-    "author": "Michael Tr\u00f6ger",
+    "author": "Michael Tröger",
     "name": "UniversalTrigger Library",
     "url": "https://github.com/Nall-chan/IPSUniTrigger",
     "version": "1.6",
     "build": 130,
-    "date": 1594559336 ,
+    "date": 1594559336,
     "compatibility": {
         "version": "5.1"
     }
