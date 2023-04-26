@@ -113,7 +113,7 @@ class UniversalTriggerBase extends IPSModule
      */
     protected function UnregisterMessage($ObjektID, $MessageID)
     {
-        if ($ObjektID == 0) {
+        if ($ObjektID == 1) {
             return;
         }
         if ($MessageID == 0) {
@@ -134,7 +134,7 @@ class UniversalTriggerBase extends IPSModule
      */
     protected function RegisterMessage($ObjektID, $MessageID)
     {
-        if ($ObjektID == 0) {
+        if ($ObjektID == 1) {
             return;
         }
         if ($MessageID == 0) {

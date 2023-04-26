@@ -19,7 +19,7 @@
                     "label": "Object",
                     "name": "ObjectId",
                     "width": "auto",
-                    "add": 0,
+                    "add": 1,
                     "edit": {
                         "type": "SelectObject"
                     }
