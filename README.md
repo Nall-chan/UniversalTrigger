@@ -47,7 +47,7 @@ u.v.m.
 
 ## 3. Software-Installation
 
-  Über den 'Module-Store' in IPS das Modul 'B+G E-Tech' hinzufügen.  
+  Über den 'Module-Store' in IPS das Modul 'Universal Ereignis' hinzufügen.  
    **Bei kommerzieller Nutzung (z.B. als Errichter oder Integrator) wenden Sie sich bitte an den Autor.**  
 ![Module-Store](imgs/install.png)  
 
