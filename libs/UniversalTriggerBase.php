@@ -14,23 +14,25 @@ eval('namespace UniTrigger {?>' . file_get_contents(__DIR__ . '/helper/DebugHelp
  * @author        Michael Tröger <micha@nall-chan.net>
  * @copyright     2019 Michael Tröger
  * @license       https://creativecommons.org/licenses/by-nc-sa/4.0/ CC BY-NC-SA 4.0
- * @version       1.5
+ * @version       1.71
  *
  */
 
 /**
- * UniTrigger Basis-Klasse für die die Überwachung von Variablen auf fehlende Änderung/Aktualisierung.
+ * UniversalTriggerBase Basis-Klasse für die die Überwachung von Variablen auf fehlende Änderung/Aktualisierung.
  * Erweitert IPSModule.
  *
  * @author        Michael Tröger <micha@nall-chan.net>
  * @copyright     2019 Michael Tröger
  * @license       https://creativecommons.org/licenses/by-nc-sa/4.0/ CC BY-NC-SA 4.0
  *
- * @version       1.5
+ * @version       1.71
  *
  * @example <b>Ohne</b>
+ *
+ * @method bool SendDebug(string $Message, mixed $Data, int $Format)
  */
-class UniversalTriggerBase extends IPSModule
+class UniversalTriggerBase extends IPSModuleStrict
 {
     use \UniTrigger\DebugHelper;
     use \UniTrigger\BufferHelper;
@@ -73,7 +75,13 @@ class UniversalTriggerBase extends IPSModule
         IPS_ENGINEMESSAGE + 2   => 'Script executed',
         IPS_ENGINEMESSAGE + 3   => 'Script running'
     ];
-
+    /**
+     * Interne Funktion des SDK.
+     */
+    public function MessageSink(int $TimeStamp, int $SenderID, int $Message, array $Data): void
+    {
+        $this->FireTargetScript($TimeStamp, $SenderID, $Message, $Data);
+    }
     /**
      * Startet das Ziel-Skript.
      *
@@ -82,7 +90,7 @@ class UniversalTriggerBase extends IPSModule
      * @param int   $Message
      * @param mixed $Data
      */
-    protected function FireTargetScript($TimeStamp, $SenderID, $Message, $Data)
+    protected function FireTargetScript(int $TimeStamp, int $SenderID, int $Message, mixed $Data): void
     {
         $ScriptID = $this->ReadPropertyInteger('ScriptID');
         if ($ScriptID == 0) {
@@ -106,45 +114,45 @@ class UniversalTriggerBase extends IPSModule
     }
 
     /**
-     * Deregistriert eine Überwachung eines Links.
+     * Deregistriert eine Überwachung eines Objektes.
      *
      * @param int $ObjektID  IPS-ID
      * @param int $MessageID
      */
-    protected function UnregisterMessage($ObjektID, $MessageID)
+    protected function UnregisterMessage(int $ObjektID, int $MessageID): bool
     {
         if ($ObjektID == 1) {
-            return;
+            return false;
         }
         if ($MessageID == 0) {
-            return;
+            return false;
         }
         if (!IPS_ObjectExists($ObjektID)) {
-            return;
+            return false;
         }
         $this->SendDebug('UnRegisterWatch:' . $ObjektID, $MessageID, 0);
-        parent::UnregisterMessage($ObjektID, $MessageID);
+        return parent::UnregisterMessage($ObjektID, $MessageID);
     }
 
     /**
-     * Registriert eine Überwachung eines Links.
+     * Registriert eine Überwachung eines Objektes.
      *
      * @param int $ObjektID  IPS-ID
      * @param int $MessageID
      */
-    protected function RegisterMessage($ObjektID, $MessageID)
+    protected function RegisterMessage(int $ObjektID, int $MessageID): bool
     {
         if ($ObjektID == 1) {
-            return;
+            return false;
         }
         if ($MessageID == 0) {
-            return;
+            return false;
         }
         if (!IPS_ObjectExists($ObjektID)) {
-            return;
+            return false;
         }
         $this->SendDebug('RegisterWatch:' . $ObjektID, $MessageID, 0);
-        parent::RegisterMessage($ObjektID, $MessageID);
+        return parent::RegisterMessage($ObjektID, $MessageID);
     }
 }
 

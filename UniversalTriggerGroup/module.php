@@ -10,7 +10,7 @@ declare(strict_types=1);
  * @author        Michael Tröger <micha@nall-chan.net>
  * @copyright     2020 Michael Tröger
  * @license       https://creativecommons.org/licenses/by-nc-sa/4.0/ CC BY-NC-SA 4.0
- * @version       1.7
+ * @version       1.71
  *
  */
 
@@ -24,18 +24,18 @@ require_once __DIR__ . '/../libs/UniversalTriggerBase.php';
  * @copyright     2020 Michael Tröger
  * @license       https://creativecommons.org/licenses/by-nc-sa/4.0/ CC BY-NC-SA 4.0
  *
- * @version       1.7
+ * @version       1.71
  *
  * @example <b>Ohne</b>
  *
- * @property array $OldTrigger
+ * @property stdClass[] $OldTrigger
  */
 class UniversalTriggerGroup extends UniversalTriggerBase
 {
     /**
      * Interne Funktion des SDK.
      */
-    public function Create()
+    public function Create(): void
     {
         parent::Create();
         $this->OldTrigger = [];
@@ -46,15 +46,7 @@ class UniversalTriggerGroup extends UniversalTriggerBase
     /**
      * Interne Funktion des SDK.
      */
-    public function MessageSink($TimeStamp, $SenderID, $Message, $Data)
-    {
-        $this->FireTargetScript($TimeStamp, $SenderID, $Message, $Data);
-    }
-
-    /**
-     * Interne Funktion des SDK.
-     */
-    public function ApplyChanges()
+    public function ApplyChanges(): void
     {
         foreach ($this->OldTrigger as $ObjektTrigger) {
             $this->UnregisterMessage($ObjektTrigger->ObjectId, $ObjektTrigger->MessageId);
@@ -69,7 +61,7 @@ class UniversalTriggerGroup extends UniversalTriggerBase
         $this->OldTrigger = $NewTrigger;
     }
 
-    public function GetConfigurationForm()
+    public function GetConfigurationForm(): string
     {
         $form = json_decode(file_get_contents(__DIR__ . '/form.json'), true);
         $Triggers = json_decode($this->ReadPropertyString('Trigger'), true);
@@ -80,8 +72,6 @@ class UniversalTriggerGroup extends UniversalTriggerBase
         $form['elements'][1]['columns'][1]['edit']['options'] = $Messages;
         return json_encode($form);
     }
-
-    //################# PRIVATE
 }
 
 /* @} */

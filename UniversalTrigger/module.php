@@ -11,7 +11,7 @@ declare(strict_types=1);
  * @author        Michael Tröger <micha@nall-chan.net>
  * @copyright     2020 Michael Tröger
  * @license       https://creativecommons.org/licenses/by-nc-sa/4.0/ CC BY-NC-SA 4.0
- * @version       1.7
+ * @version       1.71
  *
  */
 
@@ -25,7 +25,7 @@ require_once __DIR__ . '/../libs/UniversalTriggerBase.php';
  * @copyright     2020 Michael Tröger
  * @license       https://creativecommons.org/licenses/by-nc-sa/4.0/ CC BY-NC-SA 4.0
  *
- * @version       1.7
+ * @version       1.71
  *
  * @example <b>Ohne</b>
  *
@@ -37,10 +37,11 @@ class UniversalTrigger extends UniversalTriggerBase
     /**
      * Interne Funktion des SDK.
      */
-    public function Create()
+    public function Create(): void
     {
         parent::Create();
-        $this->OldTrigger = 0;
+        $this->OldObjectId = 0;
+        $this->OldMessageId = 0;
         $this->RegisterPropertyInteger('ScriptID', 1);
         $this->RegisterPropertyInteger('ObjectId', 1);
         $this->RegisterPropertyInteger('MessageId', 10403);
@@ -49,15 +50,7 @@ class UniversalTrigger extends UniversalTriggerBase
     /**
      * Interne Funktion des SDK.
      */
-    public function MessageSink($TimeStamp, $SenderID, $Message, $Data)
-    {
-        $this->FireTargetScript($TimeStamp, $SenderID, $Message, $Data);
-    }
-
-    /**
-     * Interne Funktion des SDK.
-     */
-    public function ApplyChanges()
+    public function ApplyChanges(): void
     {
         $this->UnregisterMessage($this->OldObjectId, $this->OldMessageId);
         $this->UnregisterReference($this->OldObjectId);
@@ -70,7 +63,7 @@ class UniversalTrigger extends UniversalTriggerBase
         $this->OldMessageId = $NewMessageId;
     }
 
-    public function GetConfigurationForm()
+    public function GetConfigurationForm(): string
     {
         $Form = json_decode(file_get_contents(__DIR__ . '/form.json'), true);
         foreach (self::$Messages as $MessageId => $MessageName) {
@@ -80,8 +73,6 @@ class UniversalTrigger extends UniversalTriggerBase
         $this->SendDebug('Form', json_encode($Form), 0);
         return json_encode($Form);
     }
-
-    //################# PRIVATE
 }
 
 /* @} */

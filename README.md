@@ -1,29 +1,27 @@
 [![SDK](https://img.shields.io/badge/Symcon-PHPModul-red.svg)](https://www.symcon.de/service/dokumentation/entwicklerbereich/sdk-tools/sdk-php/)
-[![Version](https://img.shields.io/badge/Modul%20Version-1.7-blue.svg)]()
-[![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-green.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)  
-[![Version](https://img.shields.io/badge/Symcon%20Version-5.1%20%3E-green.svg)](https://www.symcon.de/forum/threads/30857-IP-Symcon-5-1-%28Stable%29-Changelog)
+[![Version](https://img.shields.io/badge/Modul%20Version-1.71-blue.svg)]()
+![Version](https://img.shields.io/badge/Symcon%20Version-7.0%20%3E-green.svg)  
+[![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-green.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Check Style](https://github.com/Nall-chan/UniversalTrigger/workflows/Check%20Style/badge.svg)](https://github.com/Nall-chan/UniversalTrigger/actions) 
 [![Run Tests](https://github.com/Nall-chan/UniversalTrigger/workflows/Run%20Tests/badge.svg)](https://github.com/Nall-chan/UniversalTrigger/actions)  
 [![Spenden](https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donate_SM.gif)](#9-spenden)    
 
-# Symcon-Modul: UniversalTrigger
+# Symcon-Modul: UniversalTrigger <!-- omit in toc -->
 
-## Dokumentation
+## Dokumentation <!-- omit in toc -->
 
 **Inhaltsverzeichnis**
 
-- [Symcon-Modul: UniversalTrigger](#symcon-modul-universaltrigger)
-  - [Dokumentation](#dokumentation)
-  - [1. Funktionsumfang](#1-funktionsumfang)
-  - [2. Voraussetzungen](#2-voraussetzungen)
-  - [3. Software-Installation](#3-software-installation)
-  - [4. Universaltrigger (single)](#4-universaltrigger-single)
-  - [5. Universaltrigger (group)](#5-universaltrigger-group)
-  - [6. Variablen im Ziel-Script](#6-variablen-im-ziel-script)
-  - [7. Parameter / Modul-Infos](#7-parameter--modul-infos)
-  - [8. Anhang](#8-anhang)
-  - [9. Spenden](#9-spenden)
-  - [10. Lizenz](#10-lizenz)
+- [1. Funktionsumfang](#1-funktionsumfang)
+- [2. Voraussetzungen](#2-voraussetzungen)
+- [3. Software-Installation](#3-software-installation)
+- [4. Universaltrigger (single)](#4-universaltrigger-single)
+- [5. Universaltrigger (group)](#5-universaltrigger-group)
+- [6. Variablen im Ziel-Script](#6-variablen-im-ziel-script)
+- [7. Parameter / Modul-Infos](#7-parameter--modul-infos)
+- [8. Changlog](#8-changlog)
+- [9. Spenden](#9-spenden)
+- [10. Lizenz](#10-lizenz)
 
 ## 1. Funktionsumfang
 
@@ -173,9 +171,10 @@ array(1) {
 |  ScriptID   | integer |      0       |                             Ziel-Script                             |
 |   Trigger   | string  |      []      | Konfiguration von Objekten und Nachrichten als JSON codiertes Array |
 
-## 8. Anhang
+## 8. Changlog
 
-**Changlog:**  
+Version 1.71:  
+ - Version für IPS 7.0.      
 
 Version 1.7:  
  - Überwachung des Root-Objektes war nicht möglich    
