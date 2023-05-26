@@ -2,8 +2,8 @@
 [![Version](https://img.shields.io/badge/Modul%20Version-1.7-blue.svg)]()
 [![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-green.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)  
 [![Version](https://img.shields.io/badge/Symcon%20Version-5.1%20%3E-green.svg)](https://www.symcon.de/forum/threads/30857-IP-Symcon-5-1-%28Stable%29-Changelog)
-[![Check Style](https://github.com/Nall-chan/IPSUniversalTrigger/workflows/Check%20Style/badge.svg)](https://github.com/Nall-chan/IPSUniversalTrigger/actions) 
-[![Run Tests](https://github.com/Nall-chan/IPSUniversalTrigger/workflows/Run%20Tests/badge.svg)](https://github.com/Nall-chan/IPSUniversalTrigger/actions)  
+[![Check Style](https://github.com/Nall-chan/UniversalTrigger/workflows/Check%20Style/badge.svg)](https://github.com/Nall-chan/UniversalTrigger/actions) 
+[![Run Tests](https://github.com/Nall-chan/UniversalTrigger/workflows/Run%20Tests/badge.svg)](https://github.com/Nall-chan/UniversalTrigger/actions)  
 [![Spenden](https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donate_SM.gif)](#9-spenden)    
 
 # Symcon-Modul: UniversalTrigger
