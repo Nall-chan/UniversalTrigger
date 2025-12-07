@@ -3,10 +3,10 @@
     "author": "Michael Tröger",
     "name": "UniversalTrigger Library",
     "url": "https://github.com/Nall-chan/UniversalTrigger",
-    "version": "1.71",
-    "build": 131,
-    "date": 1685110792,
+    "version": "1.80",
+    "build": 135,
+    "date": 1765131133,
     "compatibility": {
-        "version": "7.0"
+        "version": "8.1"
     }
 }
