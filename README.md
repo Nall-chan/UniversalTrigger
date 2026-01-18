@@ -94,13 +94,13 @@ Folgende Felder im Array der PHP-Variable `$_IPS` stehen im Ziel-Script zur Verf
  Das Ziel-Script kann anhand von 'EVENT' und 'VALUE' unterschiedliche Aktionen ausführen.  
  Dies ist gerade bei beim 'Universaltrigger (group)' sehr hilfreich.  
 
-> [!TIP] Hinweis 1:  
+> [!TIP]  
 > Die Übersetzung der Werte der Nachrichten sind hier zu finden: [Symcon Dokumentation -> Nachrichten](https://www.symcon.de/service/dokumentation/entwicklerbereich/sdk-tools/sdk-php/nachrichten/)  
 > Beispiel: Übergeordnetes Objekt hat sich geändert entspricht dem Wert 10403.  
 
 ---
 
-> [!TIP] Hinweis 2:  
+> [!TIP]  
 > Das Array aus `$_IPS['DATA']` kann einfach mit json_decode decodiert werden:
 >
 > ```php
@@ -111,12 +111,12 @@ Folgende Felder im Array der PHP-Variable `$_IPS` stehen im Ziel-Script zur Verf
 
 ---
 
-> [!TIP] Hinweis 3:  
+> [!TIP]  
 > Ausgaben des Ziel-Skript werden nur im Meldungsfenster bzw. LogFile ausgegeben, da das Script immer durch IPS gestartet wird und niemals durch die Console.  
 
 ---
 
-> [!TIP] Hinweis 4:  
+> [!TIP]  
 > Beispiel um festzustellen welche Werte in `$_IPS` und `$_IPS['DATA']` enthalten sind:
 >
 > ```php
